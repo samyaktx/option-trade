@@ -1,9 +1,21 @@
+# Endpoints
+
+- [x] **Create a user**
+    - Endpoint : `/user/create/:userId`
+    - Method : `GET`
+    - Description: Create a new user entry in INR_BALANCES with unique user Id and default 0 balances
+    
+- [x] **Create a Symbol**
+    - Endpoint : `/symbol/create/:stockSymbol`
+    - Method : `GET`
+    - Description: Create a new symbol in STOCK_BALANCES with default yes and no entries
+
 - [x] **Get INR Balance**
     - Endpoint: `/balance/inr/:userId`
     - Method: `GET`
     - Description: Returns the INR balance of a given user.
   
-- [ ] **Onramp INR**
+- [x] **Onramp INR**
     - Endpoint: `/onramp/inr`
     - Method: `POST`
     - Body: 
