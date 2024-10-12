@@ -3,7 +3,11 @@ interface UserBalance {
   locked: number;
 }
 
-export const INR_BALANCES: { [key: string]: UserBalance } = {
+interface InrBalances { 
+  [userId: string]: UserBalance;
+}
+
+export const INR_BALANCES: InrBalances = {
   user1: {
     balance: 10,
     locked: 0,
@@ -79,7 +83,7 @@ interface StockBalances {
   [userId: string]: UserStockBalances;
 }
 
-const STOCK_BALANCES: StockBalances = {
+export const STOCK_BALANCES: StockBalances = {
   user1: {
     BTC_USDT_10_Oct_2024_9_30: {
       yes: {
