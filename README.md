@@ -27,7 +27,7 @@
     ```
     - Description: Lets the user onramp INR on the platform
 
-- [ ] **Get Stock Balance**
+- [x] **Get Stock Balance**
     - Endpoint: `/balance/stock/:userId`
     - Method: `GET`
     - Description: Returns the stock balance for a user.

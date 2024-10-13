@@ -80,5 +80,30 @@ router.post("/onramp/inr", (req, res) => {
 
 });
 
+// @FIXME: /stock/:userId should be userId of particular user
+router.get("/stock/:userId", (req, res) => {
+  const { userId } = req.params;
+  const { stockSymbol } = req.body;
+
+  if (!userId) {
+    res.status(400).json({ error: "User ID is required" });
+  }
+
+  if (!stockSymbol) {
+    res.status(400).json({ error: "Stock symbol is required" });
+  }
+
+  if (STOCK_BALANCES[userId][stockSymbol].yes) {
+    res.status(200).json({
+      yesStockBalance: STOCK_BALANCES[userId][stockSymbol].yes
+    });
+  }
+
+  if (STOCK_BALANCES[userId][stockSymbol].no) {
+    res.status(200).json({
+      noStockBalance: STOCK_BALANCES[userId][stockSymbol].no
+    });
+  }
+});
 
 export default router;
