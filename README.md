@@ -8,7 +8,7 @@
 - [x] **Create a Symbol**
     - Endpoint : `/symbol/create/:stockSymbol`
     - Method : `GET`
-    - Description: Create a new symbol in STOCK_BALANCES with default yes and no entries
+    - Description: Create a new symbol in ORDER_BOOK with default yes and no entries
 
 - [x] **Get INR Balance**
     - Endpoint: `/balance/inr/:userId`
@@ -32,7 +32,7 @@
     - Method: `GET`
     - Description: Returns the stock balance for a user.
   
-- [ ]  **Buy the `yes` stock**
+- [x]  **Buy the `yes` stock**
     - Endpoint: `/order/yes`
     - Method: `POST`
     - Description: Allows a user to place a buy order for options on a stock. The order will be added to the `ORDERBOOK`.
@@ -40,13 +40,13 @@
     ```json
     {
         "userId": "123",
-        "stockSymbol": "BTC_USDT_10_Oct_2024_9_30",
+        "stockSymbol: "BTC_USDT_10_Oct_2024_9_30",
         "quantity": 100,
         "price": 1000
     }
     ```
 
-- [ ] **Place Sell Order**
+- [x] **Place Sell Order**
     - Endpoint: `/order/no`
     - Method: `POST`
     - Description: Allows a user to place a sell order for options. This will also be added to the `ORDERBOOK`.
@@ -60,12 +60,12 @@
     }
     ```
 
-- [ ] **View Orderbook**
+- [x] **View Orderbook**
     - Endpoint: `/orderbook/:stockSymbol`
     - Method: `GET`
     - Description: Returns the current buy and sell orders for a given stock.
   
-- [ ] **Mint fresh tokens**
+- [ ] **Mint fresh tokens**  (This endpoint NOT Required)
     - Endpont: `/trade/mint/:stockSymbol`
     - Method: `POST`
     - Input
